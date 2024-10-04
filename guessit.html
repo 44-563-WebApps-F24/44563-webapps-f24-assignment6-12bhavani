@@ -18,7 +18,13 @@
 </form>
 
 
-<p id="result">This text will be replaced </p>
+<p id="result"> Look here for result </p>
+
+
+<div>
+    <img src="kaju-katli.jpg" class="img-thumbnail" id="next-img" alt="Kaju Katli" width="200px" height="200px">
+    <input type="button" onclick="nextImage()" value="Next Image">
+</div>
 
 <script> 
     var attempts = 0;
@@ -27,7 +33,6 @@ function processColor(){
     
     mysterycolor = document.getElementById("mystery color").value
     guess = document.getElementById("guess").value
-    
     out = document.getElementById("result")
 
     if(mysterycolor==guess){
@@ -40,9 +45,39 @@ function processColor(){
         alert("That was not it");
         out.innerHTML = 'wrong = '+ wrong;
     }
-    
 }
+
+
+
+var showing = 1;
+function nextImage(){
+        switch(showing){
+            case 1:
+            document.getElementById('next-img').src ="creamsicle.jpg"
+            showing=showing+1;
+            break;
+            case 2:
+            document.getElementById('next-img').src ="gulab-jamun.jpg"
+            showing++;
+            break;
+            case 3:
+            document.getElementById('next-img').src ="kaju-katli.jpg"
+            showing++;
+            break; 
+            case 4: 
+            document.getElementById('next-img').src ="creamsicle.jpg"
+            showing=1;
+            break;    
+        }
+
+}    
+    
+
+
+
 </script>
+
+
 
 </body>
 </html> 
