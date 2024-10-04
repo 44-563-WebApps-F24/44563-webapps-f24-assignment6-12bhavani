@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Guess it Page</title>
+ </head>
+<body>
+
+<h2>Guess the color Bhavani Kongari</h2>
+
+<form>
+    <label for="mystery color">Guess the color </label>
+    <input type ="password" id="mystery color" name="mystery color" value=Red> <br>
+
+    <label for="guess">Enter a guess </label>
+    <input type ="text" id="guess" name="guess" autofocus> <br>
+
+    <input type="button" onclick="processColor()" value="Check the color">
+</form>
+
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+    var attempts = 0;
+    var wrong = 0;
+function processColor(){
+    
+    mysterycolor = document.getElementById("mystery color").value
+    guess = document.getElementById("guess").value
+    
+    out = document.getElementById("result")
+
+    if(mysterycolor==guess){
+        attempts = attempts + 1;
+        alert("You got it");
+        out.innerHTML = 'attempts = '+ attempts;
+    }
+    else{
+        wrong = wrong + 1;
+        alert("That was not it");
+        out.innerHTML = 'wrong = '+ wrong;
+    }
+    
+}
+</script>
+
+</body>
+</html> 
