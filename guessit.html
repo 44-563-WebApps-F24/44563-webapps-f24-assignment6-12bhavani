@@ -22,29 +22,29 @@
 
 
 <div>
-    <img src="kaju-katli.jpg" class="img-thumbnail" id="next-img" alt="Kaju Katli" width="200px" height="200px">
-    <input type="button" onclick="nextImage()" value="Next Image">
+    <img src="philodendron.jpg" class="img-thumbnail" id="next-img" alt="Ficus Elastica" width="200px" height="200px">
+    <input type="button" onclick="nextImage()" value="nextImage()">
 </div>
+
 
 <script> 
     var attempts = 0;
     var wrong = 0;
+
 function processColor(){
-    
     mysterycolor = document.getElementById("mystery color").value
     guess = document.getElementById("guess").value
     out = document.getElementById("result")
+    attempts = attempts + 1;
 
     if(mysterycolor==guess){
-        attempts = attempts + 1;
         alert("You got it");
-        out.innerHTML = 'attempts = '+ attempts;
     }
     else{
         wrong = wrong + 1;
         alert("That was not it");
-        out.innerHTML = 'wrong = '+ wrong;
     }
+    out.innerHTML = 'Attempts = ' + attempts + '  Wrongs = '+ wrong;
 }
 
 
@@ -53,19 +53,18 @@ var showing = 1;
 function nextImage(){
         switch(showing){
             case 1:
-            document.getElementById('next-img').src ="creamsicle.jpg"
+            document.getElementById('next-img').src ="ficus-elastica.png"
             showing=showing+1;
             break;
             case 2:
-            document.getElementById('next-img').src ="gulab-jamun.jpg"
+            document.getElementById('next-img').src ="impatiens.png"
             showing++;
             break;
             case 3:
-            document.getElementById('next-img').src ="kaju-katli.jpg"
+            document.getElementById('next-img').src ="philodendron.jpg"
             showing++;
             break; 
             case 4: 
-            document.getElementById('next-img').src ="creamsicle.jpg"
             showing=1;
             break;    
         }
