@@ -50,10 +50,11 @@ function updateLunch(){
     giv_property = document.getElementById("property").value;
     giv_value = document.getElementById("value").value;
 
-    
-    my_lunch[giv_property] = giv_value;
+    if (giv_property in my_lunch) {
+        my_lunch[giv_property] = (giv_value === 'true'); 
+    } 
 
-    out.innerHTML = 'Drinks: ' + my_lunch.drink + '<br>Side: ' + my_lunch.side + '<br>Eat-in: ' +  my_lunch.eat_in + '<br>' +giv_property + ': ' + my_lunch[giv_property]
+    out.innerHTML = 'Drinks: ' + my_lunch.drink + '<br>Side: ' + my_lunch.side + '<br>Eat-in: ' +  my_lunch.eat_in 
 }    
 </script>
 
