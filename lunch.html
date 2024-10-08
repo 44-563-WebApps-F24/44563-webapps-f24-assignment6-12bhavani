@@ -19,21 +19,42 @@
 
     <input type="button" onclick="startLunch()" value="Start a lunch order">
 </form>
+<br>
+<form>
+    <label for="property">Enter property</label>
+    <input type ="text" id="property" name="property" value=entree> <br>
+
+    <label for="value">Set it to: </label>
+    <input type ="text" id="value" name="value"> <br>
+
+    <input type="button" onclick="updateLunch()" value="Update the lunch">
+</form>
 
 
 <p id="result">Your order will be displayed here</p>
 
 <script> 
-var my_lunch = {};
+var my_lunch = {}
 function startLunch(){
+    my_lunch = {};
     my_lunch.drink = document.getElementById("Drink").checked
     my_lunch.side = document.getElementById("Side").checked
     my_lunch.eat_in = document.getElementById("Eat in").checked
 
     out = document.getElementById("result")
     
-    out.innerHTML = 'Your Ordered:' + '<br>Drinks: ' + my_lunch.drink + '<br>Side: ' + my_lunch.side + '<br>Eat-in: ' +  my_lunch.eat_in 
+    out.innerHTML = 'Drinks: ' + my_lunch.drink + '<br>Side: ' + my_lunch.side + '<br>Eat-in: ' +  my_lunch.eat_in 
 }
+
+function updateLunch(){
+    giv_property = document.getElementById("property").value;
+    giv_value = document.getElementById("value").value;
+
+    
+    my_lunch[giv_property] = giv_value;
+
+    out.innerHTML = 'Drinks: ' + my_lunch.drink + '<br>Side: ' + my_lunch.side + '<br>Eat-in: ' +  my_lunch.eat_in + '<br>' +giv_property + ': ' + my_lunch[giv_property]
+}    
 </script>
 
 </body>
