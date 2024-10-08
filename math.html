@@ -16,10 +16,7 @@
 
     <input type="button" onclick="powerSum()" value="Compute">
 </form>
-
-
 <p id="result">Sum of first powers with base second is sum</p>
-
 
 <script> 
 
@@ -33,7 +30,58 @@ function powerSum(){
     }
 
     out.innerHTML = 'sum of '+first+' powers with base '+second+' is '+sum;
+}
+
+</script>
+
+<form>
+    <input type="radio" id="Max" name="operation" value="max" checked>
+    <label for="Max">Max</label></br>
+  
+    <input type="radio" id="Min" name="operation" value="min">
+    <label for="Min">Min</label></br>
+  
+    <input type="radio" id="Average" name="operation" value="avg">
+    <label for="Average">Average</label></br>
+
+    <input type="radio" id="Geometric" name="operation" value="geo">
+    <label for="Geometric">Geometric</label></br>
+
+    <input type="button" onclick="processRadio()" value="Get values from check boxes">
+</form> 
+<p id="result1">Computed XXX with values first and second with result YYY”</p>
+<script>
+function processRadio(){
+    first = document.getElementById("first").value
+    second = document.getElementById("second").value
+    out1 = document.getElementById("result1")
     
+    let Max, Min;
+
+    if(parseInt(first) < parseInt(second)){
+        Min = first;
+        Max = second;
+    }    else{
+        Max = first;
+        Min = second;
+    }
+
+    if(document.getElementById("Max").checked){
+        max_sel = "Max"
+        out1.innerHTML = 'Computed '+ max_sel + ' with values '+ first+' and '+second+' with result ' + Max;
+
+    }    else if(document.getElementById("Min").checked){
+        min_sel = "Min"
+        out1.innerHTML = 'Computed '+ min_sel + ' with values '+ first+' and '+second+' with result ' + Min;
+    }    else if(document.getElementById("Average").checked){
+        Average = (parseInt(first)+parseInt(second))/2
+        avg_sel = "Average"
+        out1.innerHTML = 'Computed '+ avg_sel + ' with values '+ first+' and '+second+' with result ' + Average;
+    }    else if(document.getElementById("Geometric").checked){
+        Geometric =  (parseFloat(first) * parseFloat(second)) ** 0.5;
+        Geometric_sel = "Geometric"
+        out1.innerHTML = 'Computed '+ Geometric_sel + ' with values '+ first+' and '+second+' with result ' + Geometric;
+    }
 }
 </script>
 

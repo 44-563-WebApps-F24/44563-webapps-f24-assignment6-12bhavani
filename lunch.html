@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>It's time for Lunch</title>
+    </head>
+<body>
+
+<h2>Bhavani Kongari orders a lunch </h2>
+
+<form>
+    <input type="checkbox" id="Drink" name="option1" value="drink" checked>
+    <label for="Drink">Drink</label></br>
+      
+    <input type="checkbox" id="Side" name="option2" value="side">
+    <label for="Side">Side</label></br>
+      
+    <input type="checkbox" id="Eat in" name="topping3" value="in" checked>
+    <label for="Eat in">Eat in</label></br>
+
+    <input type="button" onclick="startLunch()" value="Start a lunch order">
+</form>
+
+
+<p id="result">Your order will be displayed here</p>
+
+<script> 
+var my_lunch = {};
+function startLunch(){
+    my_lunch.drink = document.getElementById("Drink").checked
+    my_lunch.side = document.getElementById("Side").checked
+    my_lunch.eat_in = document.getElementById("Eat in").checked
+
+    out = document.getElementById("result")
+    
+    out.innerHTML = 'Your Ordered:' + '<br>Drinks: ' + my_lunch.drink + '<br>Side: ' + my_lunch.side + '<br>Eat-in: ' +  my_lunch.eat_in 
+}
+</script>
+
+</body>
+</html> 
