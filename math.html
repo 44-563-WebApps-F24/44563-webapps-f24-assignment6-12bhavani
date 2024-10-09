@@ -5,18 +5,18 @@
  </head>
 <body>
 
-<h2>Bhavani Kongari figures out</h2>
+<h2 style="color: deeppink">Bhavani Kongari figures out</h2>
 
 <form>
-    <label for="first">Enter a number</label>
+    <label for="first" style="color: darkmagenta">Enter a number</label>
     <input type ="number" id="first" name="first" value=2> <br>
 
-    <label for="second">Enter a number </label>
+    <label for="second" style="color: darkmagenta">Enter a number </label>
     <input type ="number" id="second" name="second" value=12> <br>
 
-    <input type="button" onclick="powerSum()" value="Compute">
+    <input type="button" onclick="powerSum()" value="Compute" style="border: solid 1px lightskyblue; background-color: aqua;">
 </form>
-<p id="result">Sum of first powers with base second is sum</p>
+<p id="result" style="color: red">Sum of first powers with base second is sum</p>
 
 <script> 
 
@@ -36,20 +36,20 @@ function powerSum(){
 
 <form>
     <input type="radio" id="Max" name="operation" value="max" checked>
-    <label for="Max">Max</label></br>
+    <label for="Max" style="color: darkmagenta">Max</label></br>
   
     <input type="radio" id="Min" name="operation" value="min">
-    <label for="Min">Min</label></br>
+    <label for="Min" style="color: darkmagenta">Min</label></br>
   
     <input type="radio" id="Average" name="operation" value="avg">
-    <label for="Average">Average</label></br>
+    <label for="Average" style="color: darkmagenta">Average</label></br>
 
     <input type="radio" id="Geometric" name="operation" value="geo">
-    <label for="Geometric">Geometric</label></br>
+    <label for="Geometric" style="color: darkmagenta">Geometric</label></br>
 
-    <input type="button" onclick="processRadio()" value="Get values from check boxes">
+    <input type="button" onclick="processRadio()" value="Get values from check boxes" style="border: solid 1px lightskyblue; background-color: aqua;">
 </form> 
-<p id="result1">Computed XXX with values first and second with result YYY”</p>
+<p id="result1" style="color: red">Computed XXX with values first and second with result YYY”</p>
 <script>
 function processRadio(){
     first = document.getElementById("first").value

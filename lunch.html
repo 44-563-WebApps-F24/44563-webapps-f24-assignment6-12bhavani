@@ -5,33 +5,33 @@
     </head>
 <body>
 
-<h2>Bhavani Kongari orders a lunch </h2>
+<h2 style="color: deeppink">Bhavani Kongari orders a lunch </h2>
 
 <form>
     <input type="checkbox" id="Drink" name="option1" value="drink" checked>
-    <label for="Drink">Drink</label></br>
+    <label for="Drink" style="color: darkmagenta">Drink</label></br>
       
     <input type="checkbox" id="Side" name="option2" value="side">
-    <label for="Side">Side</label></br>
+    <label for="Side" style="color: darkmagenta">Side</label></br>
       
     <input type="checkbox" id="Eat in" name="topping3" value="in" checked>
-    <label for="Eat in">Eat in</label></br>
+    <label for="Eat in" style="color: darkmagenta">Eat in</label></br>
 
-    <input type="button" onclick="startLunch()" value="Start a lunch order">
+    <input type="button" onclick="startLunch()" value="Start a lunch order" style="border: solid 1px lightskyblue; background-color: aqua;">
 </form>
 <br>
 <form>
-    <label for="property">Enter property</label>
+    <label for="property" style="color: darkmagenta">Enter property</label>
     <input type ="text" id="property" name="property" value=entree> <br>
 
-    <label for="value">Set it to: </label>
+    <label for="value" style="color: darkmagenta">Set it to: </label>
     <input type ="text" id="value" name="value"> <br>
 
-    <input type="button" onclick="updateLunch()" value="Update the lunch">
+    <input type="button" onclick="updateLunch()" value="Update the lunch" style="border: solid 1px lightskyblue; background-color: aqua;">
 </form>
 
 
-<p id="result">Your order will be displayed here</p>
+<p id="result" style="color: red">Your order will be displayed here</p>
 
 <script> 
 var my_lunch = {}

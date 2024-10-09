@@ -5,20 +5,20 @@
  </head>
 <body>
 
-<h2>Guess the color Bhavani Kongari</h2>
+<h2 style="color: deeppink">Guess the color Bhavani Kongari</h2>
 
 <form>
-    <label for="mystery color">Guess the color </label>
-    <input type ="password" id="mystery color" name="mystery color" value=Red> <br>
+    <label for="mystery color" style="color: darkmagenta">Guess the color </label>
+    <input type ="password" id="mystery color" name="mystery color" value="Red"> <br>
 
-    <label for="guess">Enter a guess </label>
+    <label for="guess" style="color: darkmagenta">Enter a guess </label>
     <input type ="text" id="guess" name="guess" autofocus> <br>
 
-    <input type="button" onclick="processColor()" value="Check the color">
+    <input type="button" onclick="processColor()" value="Check the color" style="border: solid 1px lightskyblue; background-color: aqua;">
 </form>
 
 
-<p id="result"> Look here for result </p>
+<p id="result" style="color: darkmagenta"> Look here for result </p>
 
 
 <script> 
@@ -43,7 +43,7 @@ function processColor(){
 </script>
 
 <div>
-    <img src="philodendron.jpg" class="img-thumbnail" id="next-img" onclick="nextImage()" value="nextImage()" alt="Ficus Elastica" width="200px" height="200px">
+    <img src="philodendron.jpg" class="img-thumbnail" id="next-img" onclick="nextImage()" value="nextImage()" alt="Ficus Elastica" width="200px" height="200px" style="border:1px solid green">
 </div>
 
 <script>
